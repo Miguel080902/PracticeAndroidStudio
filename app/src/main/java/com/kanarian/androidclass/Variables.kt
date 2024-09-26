@@ -1,5 +1,5 @@
 package com.kanarian.androidclass
 
 fun main(){
-    print("owo")
+    val name = "kanariandev"
 }
