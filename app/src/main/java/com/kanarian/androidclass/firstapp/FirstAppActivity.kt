@@ -1,5 +1,6 @@
 package com.kanarian.androidclass.firstapp
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.activity.enableEdgeToEdge
@@ -29,8 +30,11 @@ class FirstAppActivity : AppCompatActivity() {
         //accion que se realiza al presionar el boton
         btnStart.setOnClickListener{
             val name = etName.text.toString()
-            if(name.isNotEmpty())
-            Log.i("kanariandev","Boton pulsado $name")
+            if(name.isNotEmpty()){
+                val intent= Intent(this, ResultActivity::class.java)
+                intent.putExtra("EXTRA_NAME", name)
+                startActivity(intent)
+            }
         }
     }
 }
