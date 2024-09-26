@@ -8,25 +8,18 @@
     android:layout_height="match_parent"
     tools:context=".firstapp.FirstAppActivity">
 
-
-    <View
-        android:id="@+id/view200"
-        android:layout_width="125dp"
-        android:layout_height="125dp"
-        app:layout_constraintStart_toEndOf="@+id/view500"
-        app:layout_constraintBottom_toTopOf="@+id/view500"
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pulsame"
+        android:textStyle="bold"
         android:background="@color/purple_200"
-        />
-
-    <View
-        android:id="@+id/view500"
-        android:layout_width="125dp"
-        android:layout_height="125dp"
-        android:background="@color/purple_500"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
