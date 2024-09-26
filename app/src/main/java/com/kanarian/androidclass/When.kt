@@ -4,6 +4,14 @@ fun main(){
     getMonth(2)
 }
 
+fun result(value:Any){
+    when(value){
+        is Int-> value + value
+        is String-> println(value)
+        is Boolean-> if(value) println("owo")
+    }
+}
+
 fun getMonth(month:Int){
     when(month){
         1 -> println("enero")
