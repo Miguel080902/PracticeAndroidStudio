@@ -21,3 +21,27 @@ fun getMonth(month:Int){
         else -> println("no existe ese mes")
     }
 }
+
+fun getTrimester(month:Int){
+    when(month){
+        1,2,3 -> println("Primer trimestre")
+
+        4,5,6 -> println("Segundo trimestre")
+
+        7,8,9 -> println("Tercer trimestre")
+
+        10,11,12 -> println("Cuarto trimestre")
+
+        else -> println("no existe ese mes")
+    }
+}
+
+fun getSemester(month:Int){
+    when(month){
+        in 1..6 -> println("Primer Semestre")
+
+        in 7..12 -> println("Segundo Semestre")
+
+        !in 1..12 -> println("no existe ese mes")
+    }
+}
