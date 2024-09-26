@@ -179,6 +179,8 @@
                     android:id="@+id/btnSubtractWeight"
                     android:layout_width="wrap_content"
                     android:layout_marginEnd="16dp"
+                    android:src="@drawable/ic_decrease"
+                    app:tint="@color/white"
                     android:backgroundTint="@color/purple_500"
                     android:layout_height="wrap_content"/>
 
@@ -186,6 +188,8 @@
                     android:id="@+id/btnPlusWeight"
                     android:layout_width="wrap_content"
                     android:backgroundTint="@color/purple_500"
+                    android:src="@drawable/ic_increase"
+                    app:tint="@color/white"
                     android:layout_height="wrap_content"/>
 
             </LinearLayout>
@@ -204,7 +208,55 @@
         app:cardCornerRadius="16dp"
         app:layout_constraintStart_toEndOf="@+id/viewWeight"
         android:layout_height="150dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/age"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:textColor="@color/title_text"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:textSize="38sp"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvAge"
+                tools:text="60"
+                android:textColor="@color/white"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/btnSubtractAge"
+                    android:layout_width="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:src="@drawable/ic_decrease"
+                    app:tint="@color/white"
+                    android:backgroundTint="@color/purple_500"
+                    android:layout_height="wrap_content"/>
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/btnPlusAge"
+                    android:layout_width="wrap_content"
+                    android:backgroundTint="@color/purple_500"
+                    android:src="@drawable/ic_increase"
+                    app:tint="@color/white"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
     </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
