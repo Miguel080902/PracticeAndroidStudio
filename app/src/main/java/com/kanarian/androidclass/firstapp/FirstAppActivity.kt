@@ -5,6 +5,7 @@ import android.util.Log
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatButton
+import androidx.appcompat.widget.AppCompatEditText
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.kanarian.androidclass.R
@@ -20,9 +21,16 @@ class FirstAppActivity : AppCompatActivity() {
             insets
         }
 
+        //acceder al boton en el activity
         val btnStart = findViewById<AppCompatButton>(R.id.btnStart)
+        val etName =findViewById<AppCompatEditText>(R.id.etName)
+
+
+        //accion que se realiza al presionar el boton
         btnStart.setOnClickListener{
-            Log.i("kanariandev","Boton pulsado")
+            val name = etName.text.toString()
+            if(name.isNotEmpty())
+            Log.i("kanariandev","Boton pulsado $name")
         }
     }
 }
